@@ -8,16 +8,21 @@ console.log(email);
 // Chiedere all'utente il suo indirizzo email e verificare se è nella lista (tramite un ciclo for).
 
 var email_utente = prompt("Inserisci il tuo indirizzo email");
-// console.log(email_utente);
+console.log(email_utente);
 
-for (var i = 0; i <= email.length; i++) {
+var email_trovata = false;
+
+for (var i = 0; i < email.length; i++) {
 
     if (email_utente == email[i]) {
-        console.log("La tue email è corretta");
-    } else {
-        console.log("La tue email non è corretta");
+        email_trovata = true;
     }
 }
 
-
 // Comunicare quindi un messaggio appropriato (sei in lista/non sei in lista)
+
+if (email_trovata) {
+    console.log("La tua email è corretta")
+} else {
+    console.log("La tua email non è corretta")
+}
